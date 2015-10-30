@@ -1,0 +1,24 @@
+From 2f57e5f506e7226db8a0435cdc4593116cfc56d5 Mon Sep 17 00:00:00 2001
+From: Nicolas Aguirre <aguirre.nicolas@gmail.com>
+Date: Fri, 9 Oct 2015 12:01:27 +0200
+Subject: [PATCH] Fix build
+
+---
+ src/bin/snapshot_widgets_file_icons.c | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/bin/snapshot_widgets_file_icons.c b/src/bin/snapshot_widgets_file_icons.c
+index 4bfb42f..6298088 100644
+--- a/src/bin/snapshot_widgets_file_icons.c
++++ b/src/bin/snapshot_widgets_file_icons.c
+@@ -94,7 +94,6 @@ static void _setup(void)
+          efl_gfx_position_set(50, 50),
+          efl_gfx_size_set(200, 200),
+          efl_gfx_fill_set(0, 0, 200, 200),
+-         evas_obj_image_snapshot_set(EINA_TRUE),
+          efl_gfx_filter_program_set(filter, "test"));
+ 
+    done = 0;
+-- 
+1.9.1
+
