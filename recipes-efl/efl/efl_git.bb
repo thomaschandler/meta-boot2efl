@@ -1,7 +1,7 @@
 require ${BPN}.inc
 
 SRC_URI = "\
-    git://github.com/FlorentRevest/EFL.git \
+    git://git.enlightenment.org/core/efl.git;branch=devs/captainigloo/eglfs \
 "
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
