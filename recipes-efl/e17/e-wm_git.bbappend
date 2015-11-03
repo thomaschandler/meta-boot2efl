@@ -1,7 +1,7 @@
 # Use custom sources
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI = " \
-    git://github.com/FlorentRevest/Enlightenment;protocol=https \
+    git://git.enlightenment.org/core/enlightenment.git;protocol=http;branch=devs/captainigloo/eglfs \
     file://enlightenment_start.oe \
     file://applications.menu \
     file://enlightenment.service.in \
