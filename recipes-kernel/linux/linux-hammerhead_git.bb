@@ -1,19 +1,18 @@
 require recipes-kernel/linux/linux.inc
 
-SUMMARY = "Android kernel for the Radxa Rock board"
+SUMMARY = "Android kernel for the hammerhead Nexus 5 phone"
 SECTION = "kernel"
 
 COMPATIBLE_MACHINE = "hammerhead"
 
-DESCRIPTION = "Linux kernel for the Samsung SM-T210 device based on the offical \
-source from Samsung"
+DESCRIPTION = "Linux kernel for the LG Nexus 5 (Hammerhead) device"
 
 KERNEL_RAM_BASE = "0x00008000"
 RAMDISK_RAM_BASE = "0x02900000"
 SECOND_RAM_BASE = "0x00f00000"
 TAGS_RAM_BASE = "0x02700000"
 
-CMDLINE = "console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead  user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1"
+CMDLINE = "console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1 enable_adb"
 
 inherit kernel_android
 
