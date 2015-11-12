@@ -9,5 +9,6 @@ INSANE_SKIP_${PN} = "arch"
 INSANE_SKIP_${PN} += "ldflags"
 # Fixing QA relocations in .text error for all binaries
 INSANE_SKIP_${PN} += "textrel"
+INSANE_SKIP_${PN} += "dev-so"
 
-SRC_URI = "file://system.tar.xz"
+SRC_URI = "file://system.tar.bz2"
