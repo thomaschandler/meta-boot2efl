@@ -4,3 +4,6 @@ DEPENDS = "virtual/libiconv tslib curl glib-2.0 gnutls pkgconfig zlib jpeg opens
 DEPENDS_class-native = "freetype-native libpng-native jpeg-native tiff-native libfribidi-native glib-2.0-native dbus-native"
 
 RDEPENDS_ecore = "ecore-audio ecore-input-evas ecore-input ecore-imf-evas ecore-imf ecore-file ecore-con ecore-ipc ecore-evas"
+
+SEC_URI_append = "file://0001-Revert-ector-cleanup-default-backend-drawer.patch \
+                  file://0002-Revert-ector-add-NEON-support-for-composition-functi.patch"
