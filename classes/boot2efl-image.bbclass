@@ -12,7 +12,7 @@ IMAGE_INSTALL += "bash"
 
 # Utils
 IMAGE_INSTALL += "less iotop procps htop"
-IMAGE_INSTALL += "nano vim tzdata coreutils bash file findutils gawk grep psmisc sed util-linux sudo module-init-tools wget net-tools nano logrotate tar zlib gzip bzip2s"
+IMAGE_INSTALL += "nano vim tzdata coreutils bash file findutils gawk grep psmisc sed util-linux sudo module-init-tools wget net-tools nano logrotate tar zlib gzip bzip2"
 
 # EFL
 IMAGE_INSTALL += "e-wm expedite liberation-font"
