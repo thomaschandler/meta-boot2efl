@@ -12,6 +12,6 @@ LIBHYBRIS_RDEPENDS = " \
     android-system \
     android-system-compat \
     android-tools \
-" 
+"
 
 RDEPENDS_${PN} = "${LIBHYBRIS_RDEPENDS}"

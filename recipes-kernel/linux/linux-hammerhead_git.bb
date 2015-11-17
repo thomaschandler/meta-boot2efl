@@ -17,13 +17,12 @@ CMDLINE = "console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=
 inherit kernel_android
 
 SRC_URI = " \
-  git://android.googlesource.com/kernel/msm.git;protocol=https;branch=android-msm-hammerhead-3.4-lollipop-mr1.1 \
+  git://github.com/CyanogenMod/android_kernel_lge_hammerhead.git;branch=stable/cm-11.0 \
   file://0001-Fix-build-with-gcc-5.x.patch \
-  file://0001-cgroup-add-xattr-support-for-android-msm.patch \
   file://defconfig \
 "
 
-SRCREV = "0315133ea8bc6f8126d1f86fd727d6964007351b"
+SRCREV = "03909e9ff9f91a6285af67845756ecd67391341f"
 
 S = "${WORKDIR}/git"
 PV = "3.4.0"
