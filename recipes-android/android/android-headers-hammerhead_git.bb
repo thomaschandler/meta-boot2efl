@@ -1,4 +1,4 @@
-require recipes-android/android-headers/android-headers.inc
+require android-headers.inc
 
 PV = "5.1.1"
 

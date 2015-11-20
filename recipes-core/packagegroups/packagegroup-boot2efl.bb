@@ -9,8 +9,6 @@ inherit packagegroup
 
 LIBHYBRIS_RDEPENDS = " \
     ${VIRTUAL-RUNTIME_android-system-image} \
-    android-system \
-    android-system-compat \
     android-tools \
 "
 
