@@ -1,0 +1,20 @@
+[Unit]
+Description=Droid mount for /mnt/asec
+Before=local-fs.target systemd-modules-load.service
+
+[Mount]
+What=tmpfs
+Where=/mnt/asec
+Type=tmpfs
+Options=mode=0755,gid=1000
+# Options had SELinux context option:  
+
+# Default is 90 which makes mount period too long in case of
+# errors so drop it down a notch.
+TimeoutSec=10
+
+[Install]
+WantedBy=local-fs.target
+
+# From ./out/target/product/hammerhead/root/init.rc :
+#     mount tmpfs tmpfs /mnt/asec mode=0755,gid=1000
