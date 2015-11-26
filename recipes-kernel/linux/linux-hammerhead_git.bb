@@ -12,7 +12,7 @@ RAMDISK_RAM_BASE = "0x02900000"
 SECOND_RAM_BASE = "0x00f00000"
 TAGS_RAM_BASE = "0x02700000"
 
-CMDLINE = "console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1 enable_myadb"
+CMDLINE = "console=ttyHSL0,115200,n8 androidboot.hardware=hammerhead user_debug=31 maxcpus=2 msm_watchdog_v2.enable=1"
 
 inherit kernel_android
 
