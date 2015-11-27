@@ -14,7 +14,7 @@ Type=notify
 NotifyAccess=all
 ExecStart=/bin/sh /usr/bin/droid/droid-hal-startup.sh
 ExecStop=/usr/bin/droid/kill-cgroup.sh %c
-Restart=always
+#Restart=always
 # Lets make sure we don't block minutes in case of errors.
 TimeoutSec=15
 StartLimitInterval=60
