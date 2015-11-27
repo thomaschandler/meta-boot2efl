@@ -11,6 +11,7 @@ inherit systemd
 SRC_URI = "file://android-hal.tar.xz \
            file://droid-hal-init.service \
            file://droid-hal-startup.sh \
+           file://droid-init-done.sh \
            file://999-android-system.rules \
            file://firmware.mount \
            file://mnt-asec.mount \
@@ -38,14 +39,15 @@ do_install () {
 
     install -d ${D}${sysconfdir}/systemd/
     install -d ${D}${sysconfdir}/systemd/basic.target.wants
-    ln -sf ${systemd_unitdir}/system/droid-hal-init.service ${D}${sysconfdir}/systemd/basic.target.wants/$mount.mount 
+    ln -sf ${systemd_unitdir}/system/droid-hal-init.service ${D}${sysconfdir}/systemd/system/basic.target.wants/$mount.mount
 
     install -d ${D}${bindir}/droid
     install -m 0644 ${WORKDIR}/droid-hal-startup.sh ${D}${bindir}/droid
+    install -m 0644 ${WORKDIR}/droid-init-done.sh ${D}${bindir}/droid
 
     install -d ${D}${sysconfdir}/systemd/local-fs.target.wants
 
-    for mount in ${MOUNT_UNITS} ; do 
+    for mount in ${MOUNT_UNITS} ; do
         install -m 0644 ${WORKDIR}/$mount.mount ${D}${systemd_unitdir}/system
         ln -sf ${systemd_unitdir}/system/$mount.mount ${D}${sysconfdir}/systemd/local-fs.target.wants/$mount.mount
     done

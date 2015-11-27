@@ -21,4 +21,4 @@ StartLimitInterval=60
 StartLimitBurst=2
 
 [Install]
-WantedBy=graphical.target
+WantedBy=basic.target
