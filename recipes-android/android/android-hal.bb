@@ -12,7 +12,6 @@ SRC_URI = "file://android-hal.tar.xz \
            file://droid-hal-init.service \
            file://droid-hal-startup.sh \
            file://droid-init-done.sh \
-           file://999-android-system.rules \
            file://firmware.mount \
            file://mnt-asec.mount \
            file://mnt-fuse.mount \

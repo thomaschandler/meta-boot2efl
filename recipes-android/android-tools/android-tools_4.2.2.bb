@@ -27,7 +27,6 @@ SRC_URI = " \
     file://adbd-disable-client-authentication.patch \
     file://disable-selinux-support.patch \
     file://remove-libselinux.patch;patchdir=.. \
-    file://android-tools-adbd.service \
 "
 S = "${WORKDIR}/android-tools"
 
@@ -37,8 +36,6 @@ SRC_URI[debian.md5sum] = "5e409d01caf3c33fc60a2100464754ff"
 SRC_URI[debian.sha256sum] = "320757edc8af015f40335c41dc96bf37e2d50c9f3a40a31e64264ff6e2dba5e3"
 
 inherit systemd
-
-SYSTEMD_SERVICE_${PN} = "android-tools-adbd.service"
 
 do_compile() {
     # Setting both variables below causing our makefiles to not work with implicit make
@@ -61,5 +58,4 @@ do_install() {
     install -m 0755 ${S}/extras/ext4_utils/make_ext4fs ${D}${bindir}
 
     install -d ${D}${systemd_unitdir}/system
-    install -m 0644 ${WORKDIR}/android-tools-adbd.service ${D}${systemd_unitdir}/system
 }
