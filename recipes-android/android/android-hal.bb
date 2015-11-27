@@ -12,6 +12,7 @@ SRC_URI = "file://android-hal.tar.xz \
            file://droid-hal-init.service \
            file://droid-hal-startup.sh \
            file://droid-init-done.sh \
+           file://999-android-system.rules \
            file://firmware.mount \
            file://mnt-asec.mount \
            file://mnt-fuse.mount \
@@ -38,8 +39,6 @@ do_install () {
 
     install -d ${D}${systemd_unitdir}/system
     install -m 0644 ${WORKDIR}/droid-hal-init.service ${D}${systemd_unitdir}/system
-
-
 
     install -d ${D}${sysconfdir}/systemd/system
     install -d ${D}${sysconfdir}/systemd/system/basic.target.wants
@@ -69,4 +68,4 @@ INHIBIT_PACKAGE_STRIP = "1"
 FILES_${PN} += "  / /usr/libexec/droid-hybris"
 
 #doesn't work for now
-#SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"
+SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"
