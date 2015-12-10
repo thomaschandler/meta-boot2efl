@@ -8,7 +8,7 @@ PV = "0.1.0+gitr${SRCPV}"
 PR = "r1"
 PE = "1"
 
-SRC_URI = "git://github.com/libhybris/libhybris;branch=master;protocol=git"
+SRC_URI = "git://github.com/benierc/libhybris.git;branch=master;protocol=git"
 S = "${WORKDIR}/git/hybris"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -33,11 +33,11 @@ COMPATIBLE_MACHINE_x86-64 = "(-)"
 # We don't ship any android binaries but depend on someone else doing this
 # Your image needs to pull right MACHINE specific implementation
 # use VIRTUAL-RUNTIME_android-system-image in some packagegroup
-# RDEPENDS cannot be used because this is TUNE_PKGARCH recipe and 
+# RDEPENDS cannot be used because this is TUNE_PKGARCH recipe and
 # android-system-image is MACHINE_ARCH
 # RDEPENDS_${PN} += "${VIRTUAL-RUNTIME_android-system-image}"
 
-EXTRA_OECONF = "--with-android-headers=${STAGING_INCDIR}/android"
+EXTRA_OECONF = "--with-android-headers=${STAGING_INCDIR}/android --enable-trace"
 
 # If you want to enable debugging/tracing functionality add the following to a bbappend
 # EXTRA_OECONF += "--enable-debug --enable-trace"

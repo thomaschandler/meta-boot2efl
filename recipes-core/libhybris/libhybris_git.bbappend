@@ -1,3 +1,7 @@
+#FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+#SRC_URI_prepend = " \
+#    file://0001-hwcomposer-add-eglfs.patch \
+#"
 SRCREV = "${AUTOREV}"
 DEPENDS += " wayland"
 EXTRA_OECONF += " --enable-wayland \
@@ -5,3 +9,4 @@ EXTRA_OECONF += " --enable-wayland \
                    --enable-property-cache"
 
 COMPATIBLE_MACHINE = "(hammerhead)"
+

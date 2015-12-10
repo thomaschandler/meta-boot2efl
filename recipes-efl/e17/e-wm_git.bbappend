@@ -6,6 +6,7 @@ SRC_URI = " \
     file://applications.menu \
     file://enlightenment.service.in \
     file://0001-Disables-mixer-and-shot-which-doesn-t-work-as-expect.patch \
+    file://0002-modif-hwcomposer.patch \
 "
 SRCREV = "${AUTOREV}"
 PV = "git"

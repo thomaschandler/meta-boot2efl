@@ -60,4 +60,5 @@ INHIBIT_PACKAGE_STRIP = "1"
 
 FILES_${PN} += "  / /usr/libexec/droid-hybris"
 
-SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"
+#doesn't work for now
+#SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"

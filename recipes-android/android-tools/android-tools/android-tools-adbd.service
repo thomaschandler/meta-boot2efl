@@ -4,8 +4,7 @@ Description=Android Debug Bridge
 [Service]
 Type=simple
 Restart=on-failure
-ExecStartPre=/usr/bin/android-gadget-setup adb
-ExecStart=/usr/bin/adbd
+ExecStart=/usr/bin/android-gadget-setup adb
 StandardOutput=null
 
 [Install]
