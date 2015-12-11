@@ -1,12 +1,11 @@
 # Use custom sources
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI = " \
-    git://git.enlightenment.org/core/enlightenment.git;protocol=http;branch=devs/captainigloo/eglfs \
+    git://git.projects.openwide.fr/open-wide/efl-hybris-enlightenment.git;protocol=ssh;branch=devs/cbenier/eglfs \
     file://enlightenment_start.oe \
     file://applications.menu \
     file://enlightenment.service.in \
     file://0001-Disables-mixer-and-shot-which-doesn-t-work-as-expect.patch \
-    file://0002-modif-hwcomposer.patch \
 "
 SRCREV = "${AUTOREV}"
 PV = "git"

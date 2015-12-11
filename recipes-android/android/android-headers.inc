@@ -7,12 +7,12 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 PROVIDES += "virtual/android-headers"
 
 do_install() {
-    install -d ${D}${includedir}/android
-    cp -rv ${S}/* ${D}${includedir}/android/
-    rm ${D}${includedir}/android/android-headers.pc
+    install -d ${D}${includedir}
+    cp -rv ${S}/* ${D}${includedir}
+    rm ${D}${includedir}/android-headers.pc
 
     if [ -e ${S}/android-config_${MACHINE}.h ] ; then
-        rm ${D}${includedir}/android/android-config.h
+        rm ${D}${includedir}/android-config.h
         install ${S}/android-config_${MACHINE}.h ${D}${includedir}/android-config.h
     fi
 
