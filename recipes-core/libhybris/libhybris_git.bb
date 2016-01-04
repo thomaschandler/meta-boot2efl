@@ -8,7 +8,7 @@ PV = "0.1.0+gitr${SRCPV}"
 PR = "r1"
 PE = "1"
 
-SRC_URI = "git://git.projects.openwide.fr/open-wide/efl-hybris-libhybris.git;branch=devs/cbenier/eglfs;protocol=ssh"
+SRC_URI = "git://git@git.projects.openwide.fr/open-wide/efl-hybris-libhybris.git;branch=devs/cbenier/eglfs;protocol=ssh"
 S = "${WORKDIR}/git/hybris"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"

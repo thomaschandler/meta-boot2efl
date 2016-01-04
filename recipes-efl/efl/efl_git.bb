@@ -1,7 +1,7 @@
 require ${BPN}.inc
 
 SRC_URI = "\
-    git://git.projects.openwide.fr/open-wide/efl-hybris-efl.git,branch=devs/cbenier/eglfs;protocole=ssh \
+    git://git@git.projects.openwide.fr/open-wide/efl-hybris-efl.git;branch=devs/cbenier/eglfs;protocol=ssh \
 "
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"

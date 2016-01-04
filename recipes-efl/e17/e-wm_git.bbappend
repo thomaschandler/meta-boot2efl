@@ -1,7 +1,7 @@
 # Use custom sources
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI = " \
-    git://git.projects.openwide.fr/open-wide/efl-hybris-enlightenment.git;protocol=ssh;branch=devs/cbenier/eglfs \
+    git://git@git.projects.openwide.fr/open-wide/efl-hybris-enlightenment.git;branch=devs/cbenier/eglfs;protocol=ssh \
     file://enlightenment_start.oe \
     file://applications.menu \
     file://enlightenment.service.in \
