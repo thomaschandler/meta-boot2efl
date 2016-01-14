@@ -3,12 +3,12 @@ bionic-based HW adaptations in glibc systems"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://COPYING;md5=3b83ef96387f14655fc854ddc3c6bd57"
 
-SRCREV = "1a91af8c07de8fa59dcbc45c1cab77adc601f0d6"
+SRCREV = "4b7c0c36930efe1f26c8c3fce2f3ee5aa1024878"
 PV = "0.1.0+gitr${SRCPV}"
 PR = "r1"
 PE = "1"
 
-SRC_URI = "git://git@git.projects.openwide.fr/open-wide/efl-hybris-libhybris.git;branch=devs/cbenier/eglfs;protocol=ssh"
+SRC_URI = "git://github.com/Openwide-Ingenierie/libhybris.git;protocol=https"
 S = "${WORKDIR}/git/hybris"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
