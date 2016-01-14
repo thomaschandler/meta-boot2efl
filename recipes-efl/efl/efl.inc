@@ -3,7 +3,7 @@ LICENSE = "MIT & BSD & LGPL-2.1"
 LIC_FILES_CHKSUM = "file://COPYING;md5=ca7873210523dcfd32694b94286dca60"
 
 DEPENDS_class-native = "freetype-native libpng-native jpeg-native tiff-native libfribidi-native glib-2.0-native dbus-native"
-DEPENDS = "virtual/libiconv tslib libinput curl glib-2.0 gnutls pkgconfig zlib jpeg openssl libsndfile1 dbus libexif librsvg freetype libpng tiff fontconfig libfribidi giflib udev efl-native util-linux virtual/libgles2 virtual/egl"
+DEPENDS = "virtual/libiconv tslib libinput curl glib-2.0 gnutls pkgconfig zlib jpeg openssl libsndfile1 dbus libexif librsvg freetype libpng tiff fontconfig libfribidi giflib udev efl-native util-linux virtual/libgles2 virtual/egl libinput libxkbcommon"
 inherit efl gettext pkgconfig
 
 BBCLASSEXTEND = "native"
@@ -29,6 +29,7 @@ EXTRA_OECONF_append_class-target = " \
     --enable-egl \
 "
 EXTRA_OECONF_append_class-native = " \
+    --with-tests=none \
     --disable-fontconfig \
     --disable-audio \
     --disable-physics \
