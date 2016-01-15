@@ -1,7 +1,7 @@
 require ${BPN}.inc
 
 SRC_URI = "\
-    git://git@git.projects.openwide.fr/open-wide/efl-hybris-efl.git;branch=devs/captainigloo/eglfs;protocol=ssh \
+    git://git.enlightenment.org/core/efl.git;branch=devs/captainigloo/eglfs;protocol=git \
 "
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
@@ -10,7 +10,7 @@ B = "${S}"
 
 EXTRA_OECONF_append_class-target = " --enable-wayland --disable-drm --disable-drm-hw-accel --with-x11=none --without-x --with-tests=none --enable-i-really-know-what-i-am-doing-and-that-this-will-probably-break-things-and-i-will-fix-them-myself-and-send-patches-aba BUILD_ENGINE_GL_DRM_FALSE='#' EVAS_STATIC_BUILD_GL_DRM_FALSE='#' BUILD_ECORE_EVAS_GL_DRM_FALSE='#'"
 
-DEPENDS = "virtual/libiconv tslib curl glib-2.0 gnutls pkgconfig zlib jpeg openssl libsndfile1 dbus libexif librsvg freetype libpng tiff fontconfig libfribidi giflib udev efl-native util-linux wayland libxkbcommon android-headers-hammerhead"
+DEPENDS = "virtual/libiconv tslib curl glib-2.0 gnutls pkgconfig zlib jpeg openssl libsndfile1 dbus libexif librsvg freetype libpng tiff fontconfig libfribidi giflib udev efl-native util-linux wayland libxkbcommon android-headers-hammerhead libxkbcommon libinput"
 DEPENDS_class-native = "freetype-native libpng-native jpeg-native tiff-native libfribidi-native glib-2.0-native dbus-native"
 
 RDEPENDS_ecore = "ecore-audio ecore-input-evas ecore-input ecore-imf-evas ecore-imf ecore-file ecore-con ecore-ipc ecore-evas"
