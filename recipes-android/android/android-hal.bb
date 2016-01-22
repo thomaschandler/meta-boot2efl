@@ -41,11 +41,11 @@ do_install () {
 
     install -d ${D}${sysconfdir}/systemd/system
     install -d ${D}${sysconfdir}/systemd/system/basic.target.wants
-    ln -sf ${systemd_unitdir}/systemd/system/droid-hal-init.service ${D}${sysconfdir}/systemd/system/basic.target.wants/droid-hal-init.service 
+    #ln -sf ${systemd_unitdir}/systemd/system/droid-hal-init.service ${D}${sysconfdir}/systemd/system/basic.target.wants/droid-hal-init.service
 
     install -d ${D}${sysconfdir}/udev
     install -d ${D}${sysconfdir}/udev/rules.d
-    ln -sf /dev/null ${D}${sysconfdir}/udev/rules.d/60-persistent-v4l.rules 
+    ln -sf /dev/null ${D}${sysconfdir}/udev/rules.d/60-persistent-v4l.rules
     install -d ${D}${bindir}/droid
     install -m 0644 ${WORKDIR}/droid-hal-startup.sh ${D}${bindir}/droid
     install -m 0644 ${WORKDIR}/droid-init-done.sh ${D}${bindir}/droid
@@ -67,4 +67,4 @@ INHIBIT_PACKAGE_STRIP = "1"
 FILES_${PN} += "  / /usr/libexec/droid-hybris"
 
 #doesn't work for now
-SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"
+#SYSTEMD_SERVICE_${PN} = "droid-hal-init.service"
