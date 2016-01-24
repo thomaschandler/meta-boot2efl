@@ -6,6 +6,7 @@ EXTRA_OECONF += " \
     "
 
 SRC_URI += " \
+    file://platform-device \
     file://997-droid-drm.rules                      \
     file://998-droid-system.rules                   \
     file://999-android-system.rules                 \
@@ -20,6 +21,7 @@ do_install_append(){
     install -m 0644 ${WORKDIR}/999-android-system.rules                ${D}${base_libdir}/udev/rules.d/
     install -m 0644 ${WORKDIR}/999-bluetooth.rules                     ${D}${base_libdir}/udev/rules.d/
     install -m 0644 ${WORKDIR}/999-extra-rules.rules                   ${D}${base_libdir}/udev/rules.d/
+    install -m 0644 ${WORKDIR}/platform-device ${D}${base_libdir}/udev/
 }
 
 FILES_udev += " ${base_libdir}/udev"
