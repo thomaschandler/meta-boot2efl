@@ -20,10 +20,4 @@ do_install_append() {
                         done
 }
 
-do_configure_prepend () {
-    pushd .
-    cd ${S}
-    ./bootstrap
-    popd
-}
-
+# Removed do_configure_prepend to fix pushd not found
