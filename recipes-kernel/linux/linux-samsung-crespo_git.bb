@@ -9,7 +9,7 @@ DESCRIPTION = "Linux kernel for the Samsung Crespo device based on the offical \
 source from Samsung"
 
 KERNEL_RAM_BASE = "0x30000000"
-EXTRA_ABOOTIMG_ARGS = "-c \"pagesize=4096\""
+# https://github.com/ggrandou/abootimg/blob/master/README#L141
 inherit kernel_android
 
 SRC_URI = " \
