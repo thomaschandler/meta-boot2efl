@@ -15,6 +15,7 @@ inherit kernel_android
 SRC_URI = " \
   git://github.com/shr-distribution/linux.git;protocol=git;branch=crespo/3.0/master \
   file://defconfig \
+  file://defined-fix.patch \
 "
 
 S = "${WORKDIR}/git"

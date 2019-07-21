@@ -1,0 +1,12 @@
+--- a/kernel/timeconst.pl    2019-07-21 19:56:25.037593874 +0000
++++ b/kernel/timeconst.pl       2019-07-21 19:55:47.086971244 +0000
+@@ -370,7 +370,7 @@
+	}
+
+	@val = @{$canned_values{$hz}};
+-	if (!defined(@val)) {
++	if (!@val) {
+		@val = compute_values($hz);
+	}
+	output($hz, @val);
+}
